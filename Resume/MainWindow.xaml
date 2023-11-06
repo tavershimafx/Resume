@@ -1,0 +1,1135 @@
+﻿<Window x:Class="Resume.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Resume"
+        mc:Ignorable="d"
+        Title="MainWindow" Width="1100"
+        WindowStyle="None">
+
+    <Border Padding="50" Background="{StaticResource VeryDarkBrush}">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+
+            <StackPanel Orientation="Vertical">
+
+                <!--Profile picture and initials-->
+                <Grid VerticalAlignment="Top">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--profile picture-->
+                    <Border Height="120" 
+                        Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                        CornerRadius="{Binding ActualHeight, RelativeSource={RelativeSource Self}}">
+
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/Images/profile.jpg" />
+                        </Border.Background>
+                    </Border>
+
+                    <!--Applicant initials-->
+                    <StackPanel Grid.Column="1" 
+                            Orientation="Vertical"
+                            Margin="10 0 0 0">
+
+                        <!--Applicant name-->
+                        <TextBlock Text="Tavershima Ako"
+                               FontWeight="Bold"
+                               FontSize="{StaticResource FontSizeVeryLarge}"
+                               Foreground="{StaticResource LightBrush}"/>
+
+                        <!--Ceo and coFounder-->
+                        <TextBlock Text="CEO and CoFounder Tavershima"
+                               FontSize="{StaticResource FontSizeLarge}"
+                               Padding="2"
+                               Foreground="{StaticResource GreyBrush}"/>
+
+
+                        <!--Contact details-->
+                        <StackPanel Orientation="Horizontal">
+
+                            <!--Profession-->
+                            <TextBlock FontFamily="{StaticResource LineIcon}"
+                                   FontSize="{StaticResource FontSizeRegular}"
+                                   VerticalAlignment="Center"
+                                   Foreground="{StaticResource GreyBrush}"
+                                   Text="{StaticResource BriefcaseIcon}" />
+
+                            <TextBlock FontWeight="Regular"
+                                   FontSize="{StaticResource FontSizeRegular}"
+                                   Text="Software Engineer"
+                                   Padding="8 3 3 3"
+                                   VerticalAlignment="Center"
+                                   Foreground="{StaticResource GreyBrush}"/>
+
+                            <!--Mail box-->
+                            <TextBlock FontFamily="{StaticResource LineIcon}"
+                                   FontSize="{StaticResource FontSizeRegular}"
+                                   VerticalAlignment="Center"
+                                   Margin="15 0 0 0"
+                                   Text="{StaticResource EnvelopeIcon}"
+                                   Foreground="{StaticResource GreyBrush}" />
+
+                            <TextBlock FontWeight="Regular"
+                                   FontSize="{StaticResource FontSizeRegular}"
+                                   Text="akotaver@gmail.com"
+                                   Padding="8 3 3 3"
+                                   VerticalAlignment="Center"
+                                   Foreground="{StaticResource GreyBrush}"/>
+
+                            <!--Location-->
+                            <TextBlock FontFamily="{StaticResource LineIcon}"
+                                   FontSize="{StaticResource FontSizeRegular}"
+                                   VerticalAlignment="Center"
+                                   Margin="15 0 0 0"
+                                   Text="{StaticResource MarkerIcon}"
+                                   Foreground="{StaticResource GreyBrush}" />
+
+                            <TextBlock FontWeight="Regular"
+                                   FontSize="{StaticResource FontSizeRegular}"
+                                   Text="Abuja - Nigeria"
+                                   Padding="8 3 3 3"
+                                   VerticalAlignment="Center"
+                                   Foreground="{StaticResource GreyBrush}"/>
+
+                            <!--Years of experience-->
+                            <TextBlock FontFamily="{StaticResource LineIcon}"
+                                   FontSize="{StaticResource FontSizeRegular}"
+                                   VerticalAlignment="Center"
+                                   Margin="15 0 0 0"
+                                   Text="{StaticResource ChartIcon}"
+                                   Foreground="{StaticResource GreyBrush}" />
+
+                            <TextBlock FontWeight="Regular"
+                                   FontSize="{StaticResource FontSizeRegular}"
+                                   Text="4 Years Experience"
+                                   Padding="8 3 3 3"
+                                   VerticalAlignment="Center"
+                                   Foreground="{StaticResource GreyBrush}"/>
+                        </StackPanel>
+
+                    </StackPanel>
+                </Grid>
+
+                <!--About-->
+                <StackPanel Orientation="Vertical">
+
+                    <!--About-->
+                    <TextBlock Text="About"
+                           FontSize="{StaticResource FontSizeRegular}"
+                           FontWeight="Bold" Margin="0 20"
+                           Foreground="{StaticResource GreyBrush}"
+                           />
+
+                    <!--Introduction-->
+                    <TextBlock Text="Software Engineer building Showcase - where developers hang out and find new opportunities together as a community"
+                           FontSize="{StaticResource FontSizeRegular}"
+                           Foreground="{StaticResource GreyBrush}"
+                           />
+                    <Border BorderThickness="0.5" 
+                        BorderBrush="{StaticResource DarkGreyBrush}"  
+                        Margin="0 10"
+                        Width="{Binding Width, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type StackPanel}}}"
+                        />
+                </StackPanel>
+
+                <!--Links-->
+                <StackPanel Orientation="Vertical">
+
+                    <TextBlock Text="Links"
+                           FontSize="{StaticResource FontSizeRegular}"
+                           FontWeight="Bold" Margin="0 20"
+                           Foreground="{StaticResource GreyBrush}"
+                           />
+
+                    <!--Introduction-->
+                    <StackPanel Orientation="Horizontal">
+
+                        <!--Instagram-->
+                        <Border Padding="5" 
+                            Background="{StaticResource DarkBrush}"
+                            CornerRadius="3"
+                            Margin="5 0">
+
+                            <StackPanel Orientation="Horizontal">
+                                <!--icon-->
+                                <TextBlock FontFamily="{StaticResource LineIcon}"
+                                       FontSize="{StaticResource FontSizeRegular}"
+                                       VerticalAlignment="Center"
+                                       Margin="15 0 0 0"
+                                       Foreground="{StaticResource GreyBrush}"
+                                       Text="{StaticResource InstagramIcon}" />
+
+                                <TextBlock FontWeight="Regular"
+                                       FontSize="{StaticResource FontSizeRegular}"
+                                       Text="Instagram"
+                                       Padding="8 3 15 3"
+                                       Foreground="{StaticResource GreyBrush}"
+                                       VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!--Twitter-->
+                        <Border Padding="5" 
+                            Background="{StaticResource DarkBrush}"
+                            CornerRadius="3"
+                            Margin="5 0">
+
+                            <StackPanel Orientation="Horizontal">
+                                <!--icon-->
+                                <TextBlock FontFamily="{StaticResource LineIcon}"
+                                       FontSize="{StaticResource FontSizeRegular}"
+                                       VerticalAlignment="Center"
+                                       Margin="15 0 0 0"
+                                       Foreground="{StaticResource GreyBrush}"
+                                       Text="{StaticResource TwitterIcon}" />
+
+                                <TextBlock FontWeight="Regular"
+                                       FontSize="{StaticResource FontSizeRegular}"
+                                       Text="Twitter"
+                                       Padding="8 3 15 3"
+                                       Foreground="{StaticResource GreyBrush}"
+                                       VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!--Github-->
+                        <Border Padding="5" 
+                            Background="{StaticResource DarkBrush}"
+                            CornerRadius="3"
+                            Margin="5 0">
+
+                            <StackPanel Orientation="Horizontal">
+                                <!--icon-->
+                                <TextBlock FontFamily="{StaticResource LineIcon}"
+                                       FontSize="{StaticResource FontSizeRegular}"
+                                       VerticalAlignment="Center"
+                                       Margin="15 0 0 0"
+                                       Foreground="{StaticResource GreyBrush}"
+                                       Text="{StaticResource GithubIcon}" />
+
+                                <TextBlock FontWeight="Regular"
+                                       FontSize="{StaticResource FontSizeRegular}"
+                                       Text="Github"
+                                       Padding="8 3 15 3"
+                                       Foreground="{StaticResource GreyBrush}"
+                                       VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!--website-->
+                        <Border Padding="5" 
+                            Background="{StaticResource DarkBrush}"
+                            CornerRadius="3"
+                            Margin="5 0">
+
+                            <StackPanel Orientation="Horizontal">
+                                <!--icon-->
+                                <TextBlock FontFamily="{StaticResource LineIcon}"
+                                       FontSize="{StaticResource FontSizeRegular}"
+                                       VerticalAlignment="Center"
+                                       Margin="15 0 0 0"
+                                       Foreground="{StaticResource GreyBrush}"
+                                       Text="{StaticResource WebsiteIcon}" />
+
+                                <TextBlock FontWeight="Regular"
+                                       FontSize="{StaticResource FontSizeRegular}"
+                                       Text="Website"
+                                       Padding="8 3 15 3"
+                                       Foreground="{StaticResource GreyBrush}"
+                                       VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!--Facebook-->
+                        <Border Padding="5" 
+                            Background="{StaticResource DarkBrush}"
+                            CornerRadius="3"
+                            Margin="5 0">
+
+                            <StackPanel Orientation="Horizontal">
+                                <!--icon-->
+                                <TextBlock FontFamily="{StaticResource LineIcon}"
+                                       FontSize="{StaticResource FontSizeRegular}"
+                                       VerticalAlignment="Center"
+                                       Margin="15 0 0 0"
+                                       Foreground="{StaticResource GreyBrush}"
+                                       Text="{StaticResource FacebookIcon}" />
+
+                                <TextBlock FontWeight="Regular"
+                                       FontSize="{StaticResource FontSizeRegular}"
+                                       Text="Facebook"
+                                       Padding="8 3 15 3"
+                                       Foreground="{StaticResource GreyBrush}"
+                                       VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!--Discord-->
+                        <Border Padding="5" 
+                            Background="{StaticResource DarkBrush}"
+                            CornerRadius="3"
+                            Margin="5 0">
+
+                            <StackPanel Orientation="Horizontal">
+                                <!--icon-->
+                                <TextBlock FontFamily="{StaticResource LineIcon}"
+                                       FontSize="{StaticResource FontSizeRegular}"
+                                       VerticalAlignment="Center"
+                                       Margin="15 0 0 0"
+                                       Foreground="{StaticResource GreyBrush}"
+                                       Text="{StaticResource DiscordIcon}" />
+
+                                <TextBlock FontWeight="Regular"
+                                       FontSize="{StaticResource FontSizeRegular}"
+                                       Text="Discord"
+                                       Padding="8 3 15 3"
+                                       Foreground="{StaticResource GreyBrush}"
+                                       VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+
+                    <Border BorderThickness="0.5" 
+                        BorderBrush="{StaticResource DarkGreyBrush}"  
+                        Margin="0 10"
+                        Width="{Binding Width, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type StackPanel}}}"
+                        />
+                </StackPanel>
+
+                <!--References-->
+                <StackPanel Orientation="Vertical">
+
+                    <TextBlock Text="References"
+                           FontSize="{StaticResource FontSizeRegular}"
+                           FontWeight="Bold" Margin="0 20"
+                           Foreground="{StaticResource GreyBrush}"
+                           />
+
+                    <!--References details-->
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Vertical" Grid.Column="0">
+
+                            <!--Name and post held-->
+                            <Grid Margin="0 15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Border Height="50"
+                                    CornerRadius="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                                    Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                                    Margin="0 0 10 0">
+
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="/Assets/Images/profile.jpg" />
+                                    </Border.Background>
+                                </Border>
+
+                                <StackPanel Grid.Column="1">
+
+                                    <!--Name-->
+                                    <TextBlock VerticalAlignment="Center"
+                                           FontSize="{StaticResource FontSizeRegular}">
+                                    
+                                   <Run Text="Dr. I. G. Ayogu" 
+                                        FontWeight="Bold"
+                                        Foreground="{StaticResource LightBrush}" />
+                                    
+                                   <Run Text="@igayogu" 
+                                        FontSize="{StaticResource FontSizeSmall}"
+                                        Foreground="{StaticResource GreyBrush}" />
+                                    </TextBlock>
+
+
+                                    <!--Post held-->
+                                    <TextBlock Text="Lecturer, Federal University of Technology Owerri"
+                                           FontSize="{StaticResource FontSizeRegular}"
+                                           Foreground="{StaticResource GreyBrush}"
+                                           VerticalAlignment="Center"
+                                           Padding="0 2 0 0"
+                                           />
+                                </StackPanel>
+                            </Grid>
+
+                            <!--Name and post held-->
+                            <Grid Margin="0 15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Border Height="50"
+                                    CornerRadius="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                                    Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                                    Margin="0 0 10 0">
+
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="/Assets/Images/profile.jpg" />
+                                    </Border.Background>
+                                </Border>
+
+                                <StackPanel Grid.Column="1">
+
+                                    <!--Name-->
+                                    <TextBlock VerticalAlignment="Center"
+                                           FontSize="{StaticResource FontSizeRegular}">
+                                    
+                                   <Run Text="Engr. Dr. Reginald Ogu" FontWeight="Bold"
+                                        Foreground="{StaticResource LightBrush}"/>
+                                    
+                                   <Run Text="@rahulman" 
+                                        FontSize="{StaticResource FontSizeSmall}"
+                                        Foreground="{StaticResource GreyBrush}" />
+                                    </TextBlock>
+
+
+                                    <!--Post held-->
+                                    <TextBlock Text="Lecturer, Federal University of Technology Owerri"
+                                           FontSize="{StaticResource FontSizeRegular}"
+                                           Foreground="{StaticResource GreyBrush}"
+                                           VerticalAlignment="Center"
+                                           Padding="0 2 0 0"
+                                           />
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" Grid.Column="1">
+
+                            <!--Name and post held-->
+                            <Grid Margin="0 15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Border Height="50"
+                                    CornerRadius="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                                    Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                                    Margin="0 0 10 0">
+
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="/Assets/Images/profile.jpg" />
+                                    </Border.Background>
+                                </Border>
+
+                                <StackPanel Grid.Column="1">
+
+                                    <!--Name-->
+                                    <TextBlock VerticalAlignment="Center"
+                                           FontSize="{StaticResource FontSizeRegular}">
+                                    
+                                   <Run Text="Tapas Adnikary" FontWeight="Bold"
+                                        Foreground="{StaticResource LightBrush}"/>
+                                    
+                                   <Run Text="@detapass" 
+                                        FontSize="{StaticResource FontSizeSmall}"
+                                        Foreground="{StaticResource GreyBrush}" />
+                                    </TextBlock>
+
+
+                                    <!--Post held-->
+                                    <TextBlock Text="Developer, wide range of languages"
+                                           FontSize="{StaticResource FontSizeRegular}"
+                                           Foreground="{StaticResource GreyBrush}"
+                                           VerticalAlignment="Center"
+                                           Padding="0 2 0 0"
+                                           />
+                                </StackPanel>
+                            </Grid>
+
+                            <!--Name and post held-->
+                            <Grid Margin="0 15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Border Height="50"
+                                    CornerRadius="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                                    Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                                    Margin="0 0 10 0">
+
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="/Assets/Images/profile.jpg" />
+                                    </Border.Background>
+                                </Border>
+
+                                <StackPanel Grid.Column="1">
+
+                                    <!--Name-->
+                                    <TextBlock VerticalAlignment="Center"
+                                           FontSize="{StaticResource FontSizeRegular}">
+                                    
+                                   <Run Text="Araf" FontWeight="Bold"
+                                        Foreground="{StaticResource LightBrush}"/>
+                                    
+                                   <Run Text="@arafstariga" 
+                                        FontSize="{StaticResource FontSizeSmall}"
+                                        Foreground="{StaticResource GreyBrush}"/>
+                                    </TextBlock>
+
+
+                                    <!--Post held-->
+                                    <TextBlock Text="Tech Enthusiast | Growth Lead"
+                                           FontSize="{StaticResource FontSizeRegular}"
+                                           Foreground="{StaticResource GreyBrush}"
+                                           VerticalAlignment="Center"
+                                           Padding="0 2 0 0"
+                                           />
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </Grid>
+
+                    <Border BorderThickness="0.5" 
+                        BorderBrush="{StaticResource DarkGreyBrush}"  
+                        Margin="0 10"
+                        Width="{Binding Width, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type StackPanel}}}"
+                        />
+                </StackPanel>
+
+                <!--Tech stack-->
+                <StackPanel Orientation="Vertical">
+
+                    <TextBlock Text="Tech Stack"
+                           FontSize="{StaticResource FontSizeRegular}"
+                           FontWeight="Bold" Margin="0 20"
+                           Foreground="{StaticResource GreyBrush}"
+                           />
+
+                    <!--Tech stack-->
+                    <WrapPanel Orientation="Horizontal">
+
+                        <!--Python-->
+                        <Button Style="{StaticResource TechStackButton}"
+                            Tag="{StaticResource PythonIcon}"
+                            Content="Python"
+                            ToolTip="2 yrs" />
+
+                        <!--Javascript-->
+                        <Button Style="{StaticResource TechStackButton}"
+                            Tag="{StaticResource JavascriptIcon}"
+                            Content="Javascript"
+                            ToolTip="2 yrs" />
+
+                        <!--MySQL-->
+                        <Button Style="{StaticResource TechStackButton}"
+                            Tag="{StaticResource MySqlIcon}"
+                            Content="MySQL"
+                            ToolTip="2 yrs" />
+
+                        <!--Java-->
+                        <Button Style="{StaticResource TechStackButton}"
+                            Tag="{StaticResource JavaIcon}"
+                            Content="Java"
+                            ToolTip="2 yrs" />
+
+                        <!--TensorFlow-->
+                        <Button Style="{StaticResource TechStackButton}"
+                            Tag="{StaticResource GithubIcon}"
+                            Content="TensorFlow"
+                            ToolTip="2 yrs" />
+
+                        <!--Postgre SQL-->
+                        <Button Style="{StaticResource TechStackButton}"
+                            Tag="{StaticResource PosgreIcon}"
+                            Content="Postgre SQL"
+                            ToolTip="2 yrs" />
+
+                        <!--MongoDB-->
+                        <Button Style="{StaticResource TechStackButton}"
+                            Tag="{StaticResource MongoDbIcon}"
+                            Content="MongoDB"
+                            ToolTip="2 yrs"/>
+
+                        <!--AmazonDynamo-->
+                        <Button Style="{StaticResource TechStackButton}"
+                            Tag="{StaticResource AmazonDynamoIcon}"
+                            Content="AmazonDynamo"
+                            ToolTip="2 yrs" />
+
+                        <!--scikit-learn-->
+                        <Button Style="{StaticResource TechStackButton}"
+                            Tag="{StaticResource ScikitIcon}"
+                            Content="scikit-learn"
+                            ToolTip="2 yrs" />
+
+                        <!--Mailchimp-->
+                        <Button Style="{StaticResource TechStackButton}"
+                            Tag="{StaticResource MailChimpIcon}"
+                            Content="Mailchimp"
+                            ToolTip="2 yrs"/>
+
+                        <!--Go-->
+                        <Button Style="{StaticResource TechStackButton}"
+                            Tag="{StaticResource GoIcon}"
+                            Content="Go"
+                            ToolTip="2 yrs"/>
+
+                        <!--kaivalya-->
+                        <Button Style="{StaticResource TechStackButton}"
+                            Tag="{StaticResource kaivalyaIcon}"
+                            Content="kaivalya"
+                            ToolTip="2 yrs" />
+                    </WrapPanel>
+                </StackPanel>
+
+                <!--Positions-->
+                <StackPanel Orientation="Vertical">
+
+                    <TextBlock Text="Positions"
+                        FontSize="{StaticResource FontSizeRegular}"
+                        FontWeight="Bold" Margin="0 20"
+                        Foreground="{StaticResource GreyBrush}"
+                        />
+
+                    <!--Position 1-->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Border Width="55" Height="55" VerticalAlignment="Top" CornerRadius="3" Margin="0 0 20 0">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Assets/Images/profile.jpg" />
+                            </Border.Background>
+                        </Border>
+
+                        <StackPanel Orientation="Vertical" Grid.Column="1">
+                            <!--Designation-->
+                            <TextBlock FontSize="{StaticResource FontSizeRegular}"
+                                       Text="Software Engineer"
+                                       Foreground="{StaticResource LightBrush}"/>
+
+                            <!--Company name and experience-->
+                            <TextBlock FontSize="{StaticResource FontSizeRegular}" >
+                            
+                            <!--Company name-->
+                            <Run Text="Midra Consulting"
+                                 Foreground="{StaticResource PaleBlueBrush}" />
+                            
+                            <!--Years of experience-->
+                            <Run Text="   - April 2022 - Present"
+                                 Foreground="{StaticResource DarkGreyBrush}" />
+                            </TextBlock>
+
+                            <!--Job achievment 1-->
+                            <Grid Margin="0 10 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                
+                                <TextBlock TextWrapping="Wrap"
+                                           Margin="0 0 8 0"
+                                           FontSize="{StaticResource FontSizeSmall}"
+                                           Text="{StaticResource DotBullet}"
+                                           Foreground="{StaticResource GreyBrush}"/>
+                                
+                            <TextBlock Grid.Column="1" TextWrapping="Wrap"
+                                           FontSize="{StaticResource FontSizeSmall}"
+                                           Foreground="{StaticResource GreyBrush}"
+                                           Text="These pins are the analog voltage inputs that are routed to the MCUmultichannel analog-to-digital converter (ADC). You must restrict the analoginput voltage to 3.3 V or less to avoid damaging the ADC inputs. Note thatthere is no one-to-one correspondence between the Arduino channels and theMCU channels. Pins 5 and 6 are the default ADC inputs. If you need these to" />
+                            </Grid>
+
+                            <!--Job achievment 2-->
+                            <Grid Margin="0 10 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock TextWrapping="Wrap"
+                                           Margin="0 0 8 0"
+                                           FontSize="{StaticResource FontSizeSmall}"
+                                           Text="{StaticResource DotBullet}"
+                                           Foreground="{StaticResource GreyBrush}"/>
+
+                                <TextBlock Grid.Column="1" TextWrapping="Wrap"
+                                           FontSize="{StaticResource FontSizeSmall}"
+                                           Foreground="{StaticResource GreyBrush}"
+                                           Text="Interrupts are essential elements in the MCU structure. Without them, MCUscannot efficiently function given the limited memory available and low clockspeeds. MCU interrupts are implemented both in hardware and software. But" />
+                            </Grid>
+
+                            <!--Tech stack-->
+                            <TextBlock Text="Tech Stack"
+                                       FontSize="{StaticResource FontSizeSmall}"
+                                       Margin="0 10 0 5"
+                                       Foreground="{StaticResource GreyBrush}"
+                           />
+
+                            <!--Tech stack-->
+                            <WrapPanel Orientation="Horizontal">
+
+                                <!--Python-->
+                                <Button Style="{StaticResource TechStackButton}"
+                                        Tag="{StaticResource PythonIcon}"
+                                        Content="Python"
+                                        ToolTip="2 yrs" />
+
+                                <!--Javascript-->
+                                <Button Style="{StaticResource TechStackButton}"
+                                        Tag="{StaticResource MongoDbIcon}"
+                                        Content="MongoDb"
+                                        ToolTip="2 yrs" />
+
+                                <!--MySQL-->
+                                <Button Style="{StaticResource TechStackButton}"
+                                        Tag="{StaticResource MySqlIcon}"
+                                        Content="MySQL"
+                                        ToolTip="2 yrs" />
+
+                                <!--Java-->
+                                <Button Style="{StaticResource TechStackButton}"
+                                        Tag="{StaticResource JavascriptIcon}"
+                                        Content="JavaScript"
+                                        ToolTip="2 yrs" />
+                            </WrapPanel>
+                        </StackPanel>
+                    </Grid>
+
+                    <!--Position 2-->
+                    <Grid Margin="0 15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Border Width="55" Height="55" VerticalAlignment="Top" CornerRadius="3" Margin="0 0 20 0">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Assets/Images/profile.jpg" />
+                            </Border.Background>
+                        </Border>
+
+                        <StackPanel Orientation="Vertical" Grid.Column="1">
+                            <!--Designation-->
+                            <TextBlock FontSize="{StaticResource FontSizeRegular}"
+                                       Text="Software Engineer Showwcase"
+                                       Foreground="{StaticResource LightBrush}"/>
+
+                            <!--Company name and experience-->
+                            <TextBlock FontSize="{StaticResource FontSizeRegular}" >
+                            
+                            <!--Company name-->
+                            <Run Text="Showwcase"
+                                 Foreground="{StaticResource PaleBlueBrush}" />
+                            
+                            <!--Years of experience-->
+                            <Run Text="   - June 2021 - Present"
+                                 Foreground="{StaticResource DarkGreyBrush}" />
+                            </TextBlock>
+
+                            <!--Job achievment 1-->
+                            <Grid Margin="0 10 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock TextWrapping="Wrap"
+                                           Margin="0 0 8 0"
+                                           FontSize="{StaticResource FontSizeSmall}"
+                                           Text="{StaticResource DotBullet}"
+                                           Foreground="{StaticResource GreyBrush}"/>
+
+                                <TextBlock Grid.Column="1" TextWrapping="Wrap"
+                                           FontSize="{StaticResource FontSizeSmall}"
+                                           Foreground="{StaticResource GreyBrush}"
+                                           Text="These pins are the analog voltage inputs that are routed to the MCUmultichannel analog-to-digital converter (ADC). You must restrict the analoginput voltage to 3.3 V or less to avoid damaging the ADC inputs. Note thatthere is no one-to-one correspondence between the Arduino channels and theMCU channels. Pins 5 and 6 are the default ADC inputs. If you need these to" />
+                            </Grid>
+
+                            <!--Job achievment 2-->
+                            <Grid Margin="0 10 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock TextWrapping="Wrap"
+                                           Margin="0 0 8 0"
+                                           FontSize="{StaticResource FontSizeSmall}"
+                                           Text="{StaticResource DotBullet}"
+                                           Foreground="{StaticResource GreyBrush}"/>
+
+                                <TextBlock Grid.Column="1" TextWrapping="Wrap"
+                                           FontSize="{StaticResource FontSizeSmall}"
+                                           Foreground="{StaticResource GreyBrush}"
+                                           Text="Interrupts are essential elements in the MCU structure. Without them, MCUscannot efficiently function given the limited memory available and low clockspeeds. MCU interrupts are implemented both in hardware and software. But" />
+                            </Grid>
+
+                            <!--Tech stack-->
+                            <TextBlock Text="Tech Stack"
+                                       FontSize="{StaticResource FontSizeSmall}"
+                                       Margin="0 10 0 5"
+                                       Foreground="{StaticResource GreyBrush}"
+                           />
+
+                            <!--Tech stack-->
+                            <WrapPanel Orientation="Horizontal">
+
+                                <!--Python-->
+                                <Button Style="{StaticResource TechStackButton}"
+                                        Tag="{StaticResource PythonIcon}"
+                                        Content="Python"
+                                        ToolTip="2 yrs" />
+
+                                <!--Javascript-->
+                                <Button Style="{StaticResource TechStackButton}"
+                                        Tag="{StaticResource MongoDbIcon}"
+                                        Content="MongoDb"
+                                        ToolTip="2 yrs" />
+
+                                <!--MySQL-->
+                                <Button Style="{StaticResource TechStackButton}"
+                                        Tag="{StaticResource MySqlIcon}"
+                                        Content="MySQL"
+                                        ToolTip="2 yrs" />
+
+                                <!--Java-->
+                                <Button Style="{StaticResource TechStackButton}"
+                                        Tag="{StaticResource JavascriptIcon}"
+                                        Content="JavaScript"
+                                        ToolTip="2 yrs" />
+                            </WrapPanel>
+                        </StackPanel>
+                    </Grid>
+                
+                        <Border BorderThickness="0.5" 
+                                    BorderBrush="{StaticResource DarkGreyBrush}"  
+                                    Margin="0 10"
+                                    Width="{Binding Width, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type StackPanel}}}"
+                                    />
+                </StackPanel>
+
+                <!--Credentials-->
+                <StackPanel Orientation="Vertical">
+
+                    <TextBlock Text="Credentials"
+                        FontSize="{StaticResource FontSizeRegular}"
+                        FontWeight="Bold" Margin="0 20"
+                        Foreground="{StaticResource GreyBrush}"
+                        />
+                    
+                    <!--Credential 1-->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--Institution logo-->
+                        <Border Width="55" Height="55" VerticalAlignment="Top" CornerRadius="3" Margin="0 0 20 0">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Assets/Images/profile.jpg" />
+                            </Border.Background>
+                        </Border>
+
+                        <StackPanel Orientation="Vertical" Grid.Column="1">
+                            <!--Designation-->
+                            <TextBlock FontSize="{StaticResource FontSizeRegular}"
+                                       Text="Bachelor of Technology Computer Science"
+                                       Foreground="{StaticResource LightBrush}"/>
+
+                            <!--Institution and duration-->
+                            <TextBlock FontSize="{StaticResource FontSizeRegular}" >
+                            
+                            <!--Institution-->
+                            <Run Text="Federal University of Technology Owerri"
+                                 Foreground="{StaticResource DarkGreyBrush}" />
+                            
+                            <!--Duration-->
+                            <Run Text="  -  December 2017 - September 2023"
+                                 Foreground="{StaticResource DarkGreyBrush}" />
+                            </TextBlock>
+
+                        </StackPanel>
+                    </Grid>
+
+                    <!--Credential 2-->
+                    <Grid Margin="0 20 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--Institution logo-->
+                        <Border Width="55" Height="55" VerticalAlignment="Top" CornerRadius="3" Margin="0 0 20 0">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Assets/Images/profile.jpg" />
+                            </Border.Background>
+                        </Border>
+
+                        <StackPanel Orientation="Vertical" Grid.Column="1">
+                            <!--Title-->
+                            <TextBlock FontSize="{StaticResource FontSizeRegular}"
+                                       Text="West African Senior School Certificate Examination"
+                                       Foreground="{StaticResource LightBrush}"/>
+
+                            <!--Institution and duration-->
+                            <TextBlock FontSize="{StaticResource FontSizeRegular}" >
+                            
+                            <!--Institution-->
+                            <Run Text="W.M Bristow Secondary School Gboko"
+                                 Foreground="{StaticResource DarkGreyBrush}" />
+                            
+                            <!--Duration-->
+                            <Run Text="  -  September 2011 - July 2017"
+                                 Foreground="{StaticResource DarkGreyBrush}" />
+                            </TextBlock>
+
+                        </StackPanel>
+                    </Grid>
+                    
+                    <Border BorderThickness="0.5" 
+                                    BorderBrush="{StaticResource DarkGreyBrush}"  
+                                    Margin="0 10"
+                                    Width="{Binding Width, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type StackPanel}}}"
+                                    />
+                </StackPanel>
+
+                <!--Repositories-->
+                <StackPanel Orientation="Vertical">
+
+                    <TextBlock Text="Repositories"
+                                FontSize="{StaticResource FontSizeRegular}"
+                                FontWeight="Bold" Margin="0 20"
+                                Foreground="{StaticResource GreyBrush}"
+                                />
+
+                    <!--Repository 1-->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--Repo 1-->
+                        <Grid Grid.Column="0"
+                              Margin="0 0 20 0">
+                            <StackPanel Orientation="Vertical"
+                                        Margin="0 0 5 0">
+                                <!--Repo name-->
+                                <TextBlock FontSize="{StaticResource FontSizeRegular}"
+                                       Text="data-visualization"
+                                       Foreground="{StaticResource LightBrush}"/>
+
+                                <!--Short description-->
+                                <TextBlock FontSize="{StaticResource FontSizeRegular}" 
+                                           Margin="0 0 20 0" 
+                                           Text="Repository focused on data visualization techniques used in various data sets"
+                                           TextWrapping="Wrap"
+                                           Foreground="{StaticResource DarkGreyBrush}" />
+
+                                <!--Repo rating-->
+                                <StackPanel Orientation="Horizontal"
+                                            Margin="0 20 0 0">
+                                    
+                                    <!--Repo language-->
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock VerticalAlignment="Center"
+                                               Text="{StaticResource DotBullet}"
+                                               FontSize="40"
+                                               Foreground="{StaticResource PaleBlueBrush}"
+                                               Margin="0 0 10 0"
+                                               />
+
+                                        <TextBlock Grid.Column="1"
+                                               VerticalAlignment="Center"
+                                               Text="Java"
+                                               FontSize="{StaticResource FontSizeLarge}"
+                                               Foreground="{StaticResource DarkGreyBrush}" />
+                                    </Grid>
+
+                                    <!--Repo stars-->
+                                    <Grid Margin="30 0 0 0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock VerticalAlignment="Center"
+                                                   Text="{StaticResource StarIcon}"
+                                                   FontSize="{StaticResource FontSizeLarge}"
+                                                   FontFamily="{StaticResource LineIcon}"
+                                                   Foreground="{StaticResource DarkGreyBrush}"
+                                                   Margin="0 0 10 0"
+                                               />
+
+                                        <TextBlock Grid.Column="1"
+                                               VerticalAlignment="Center"
+                                               Text="0"
+                                               FontSize="{StaticResource FontSizeLarge}"
+                                               Foreground="{StaticResource DarkGreyBrush}" />
+                                    </Grid>
+
+                                    <!--Git fork-->
+                                    <Grid Margin="30 0 0 0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock VerticalAlignment="Center"
+                                                   Text="{StaticResource GitForkIcon}"
+                                                   FontSize="{StaticResource FontSizeLarge}"
+                                                   FontFamily="{StaticResource LineIcon}"
+                                                   Foreground="{StaticResource DarkGreyBrush}"
+                                                   Margin="0 0 10 0"
+                                               />
+
+                                        <TextBlock Grid.Column="1"
+                                               VerticalAlignment="Center"
+                                               Text="0"
+                                               FontSize="{StaticResource FontSizeLarge}"
+                                               Foreground="{StaticResource DarkGreyBrush}" />
+                                    </Grid>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <Border BorderThickness="1" 
+                                    BorderBrush="{StaticResource DarkGreyBrush}"
+                                    HorizontalAlignment="Right"/>
+                        </Grid>
+
+                        <!--Repo 2-->
+                        <Grid Grid.Column="1"
+                              Margin="0 0 20 0">
+                            <StackPanel Orientation="Vertical"
+                                        Margin="0 0 5 0">
+                                <!--Repo name-->
+                                <TextBlock FontSize="{StaticResource FontSizeRegular}"
+                                       Text="machine-learning"
+                                       Foreground="{StaticResource LightBrush}"/>
+
+                                <!--Short description-->
+                                <TextBlock FontSize="{StaticResource FontSizeRegular}" 
+                                           Margin="0 0 20 0" 
+                                           Text="Repository focused on machine learning techniques used in various data sets"
+                                           TextWrapping="Wrap"
+                                           Foreground="{StaticResource DarkGreyBrush}" />
+
+                                <!--Repo rating-->
+                                <StackPanel Orientation="Horizontal"
+                                            Margin="0 20 0 0">
+
+                                    <!--Repo language-->
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock VerticalAlignment="Center"
+                                               Text="{StaticResource DotBullet}"
+                                               FontSize="40"
+                                               Foreground="{StaticResource PaleRedBrush}"
+                                               Margin="0 0 10 0"
+                                               />
+
+                                        <TextBlock Grid.Column="1"
+                                               VerticalAlignment="Center"
+                                               Text="Python"
+                                               FontSize="{StaticResource FontSizeLarge}"
+                                               Foreground="{StaticResource DarkGreyBrush}" />
+                                    </Grid>
+
+                                    <!--Repo stars-->
+                                    <Grid Margin="30 0 0 0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock VerticalAlignment="Center"
+                                                   Text="{StaticResource StarIcon}"
+                                                   FontSize="{StaticResource FontSizeLarge}"
+                                                   FontFamily="{StaticResource LineIcon}"
+                                                   Foreground="{StaticResource DarkGreyBrush}"
+                                                   Margin="0 0 10 0"
+                                               />
+
+                                        <TextBlock Grid.Column="1"
+                                               VerticalAlignment="Center"
+                                               Text="0"
+                                               FontSize="{StaticResource FontSizeLarge}"
+                                               Foreground="{StaticResource DarkGreyBrush}" />
+                                    </Grid>
+
+                                    <!--Git fork-->
+                                    <Grid Margin="30 0 0 0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock VerticalAlignment="Center"
+                                                   Text="{StaticResource GitForkIcon}"
+                                                   FontSize="{StaticResource FontSizeLarge}"
+                                                   FontFamily="{StaticResource LineIcon}"
+                                                   Foreground="{StaticResource DarkGreyBrush}"
+                                                   Margin="0 0 10 0"
+                                               />
+
+                                        <TextBlock Grid.Column="1"
+                                               VerticalAlignment="Center"
+                                               Text="0"
+                                               FontSize="{StaticResource FontSizeLarge}"
+                                               Foreground="{StaticResource DarkGreyBrush}" />
+                                    </Grid>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <Border BorderThickness="1" 
+                                    BorderBrush="{StaticResource DarkGreyBrush}"
+                                    HorizontalAlignment="Right"/>
+                        </Grid>
+
+                    </Grid>
+
+                    <Border BorderThickness="0.5" 
+                                    BorderBrush="{StaticResource DarkGreyBrush}"  
+                                    Margin="0 10"
+                                    Width="{Binding Width, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type StackPanel}}}"
+                                    />
+                </StackPanel>
+
+            </StackPanel>
+
+        </ScrollViewer>
+    </Border>
+</Window>
